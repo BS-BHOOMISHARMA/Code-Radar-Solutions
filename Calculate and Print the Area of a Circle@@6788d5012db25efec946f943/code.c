@@ -3,7 +3,7 @@
  {
     float radius;
     float pie=3.14;
-    printf(" ")
+    printf(" ");
     printf("%f"&radius);
     float area;
     area=pie*radius*radius;
