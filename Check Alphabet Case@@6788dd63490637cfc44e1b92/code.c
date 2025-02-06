@@ -5,7 +5,7 @@ void main()
     if (isupper(a))
     printf("Uppercase");
     else if(islower(a))
-    printf("Lowecase");
+    printf("Lowercase");
     else
     printf("Not an alphabet");
 
