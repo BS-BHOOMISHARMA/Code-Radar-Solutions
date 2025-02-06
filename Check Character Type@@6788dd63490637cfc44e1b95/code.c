@@ -10,7 +10,10 @@ void main() {
     }
     else if (isalpha(a)) {
         printf("Consonant");
+
     }
+     else if (isdigit(a)) {
+        printf("Digit");}
     // If not a vowel or consonant, it is a special character
     else {
         printf("Special Character");
