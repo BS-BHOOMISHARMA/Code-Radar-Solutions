@@ -1,10 +1,11 @@
 #include <stdio.h>
 
 int main() {
-    int num, result;
+    int num;
     scanf("%d", &num);
-    result = ~num;
-
-    printf("%d\n", num, result);
+    if (num == 0) 
+        printf("-1\n");
+    else 
+        printf("%d\n", ~num);
     return 0;
 }
