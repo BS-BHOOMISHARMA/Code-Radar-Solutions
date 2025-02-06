@@ -6,7 +6,5 @@ void main()
     if(c>(a+b))
     printf("Valid");
     else
-    printf("Invalid")
-
-
+    printf("Invalid");
 }
