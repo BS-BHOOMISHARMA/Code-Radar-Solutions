@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <ctype.h>
 void main()
 {
     char a;
@@ -9,5 +10,4 @@ void main()
     printf("Lowercase");
     else
     printf("Not an alphabet");
-
 }
