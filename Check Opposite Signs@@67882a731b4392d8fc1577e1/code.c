@@ -1,15 +1,20 @@
 #include <stdio.h>
+
 int main() {
-    int a,b;
-    if(a>>0&& b<<0){
-    printf("True");
-    else
-    printf("False");
+    int a, b;
+
+    // Get user input
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    // Checking conditions properly
+    if (a > 0 && b < 0) {
+        printf("True\n");
+    } else if (a < 0 && b > 0) {
+        printf("True\n");
+    } else {
+        printf("False\n");
     }
-    else if(a<<0&&b>>0){
-         printf("True");
-    else
-    printf("False");
-    }
+
     return 0;
 }
