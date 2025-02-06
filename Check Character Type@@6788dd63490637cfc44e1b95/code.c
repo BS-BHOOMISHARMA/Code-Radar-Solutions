@@ -13,6 +13,6 @@ void main() {
     }
     // If not a vowel or consonant, it is a special character
     else {
-        printf("Special character");
+        printf("Special Character");
     }
 }
