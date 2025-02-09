@@ -7,7 +7,7 @@ int main() {
 
     if (num == 0) {
         printf("No set bit\n");
-        return 0;
+        return 1;
     }
 
     printf("%d\n", num & -num); 
