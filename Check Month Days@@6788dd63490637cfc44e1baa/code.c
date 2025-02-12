@@ -2,8 +2,8 @@
 
 int main() {
     int month;
-    scanf("%d", &month);{
-    switch(month):
+    scanf("%d", &month);
+    switch(month):{
     case 1:
     case 3:
     case 5:
