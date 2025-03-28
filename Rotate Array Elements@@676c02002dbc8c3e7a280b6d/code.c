@@ -13,31 +13,37 @@ void rotateArray(int arr[], int N, int K) {
     }
 }
 
-// Function to print the array
+// Function to print the array with correct formatting
 void printArray(int arr[], int N) {
     for (int i = 0; i < N; i++) {
-        printf("%d ", arr[i]);
+        printf("%d\n", arr[i]);  // Print each element on a new line
     }
-    printf("\n");
 }
 
 // Main function
 int main() {
     int N, K;
-
+    
+    // Taking input for array size
     scanf("%d", &N);
 
     int arr[N];
 
     // Taking input for array elements
-    printf("%d", N);
     for (int i = 0; i < N; i++) {
         scanf("%d", &arr[i]);
     }
+
+    // Taking input for rotation count
     scanf("%d", &K);
+
+    // Rotate the array
     rotateArray(arr, N, K);
+
+    // Print the rotated array in the expected format
     printArray(arr, N);
 
     return 0;
 }
+
 
