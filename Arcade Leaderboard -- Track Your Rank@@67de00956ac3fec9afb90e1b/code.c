@@ -1,46 +1,58 @@
 #include <stdio.h>
 
+// Function to determine ranks using a two-pointer approach
+void trackPlayerRanks(int ranked[], int n, int player[], int m, int result[]) {
+    int uniqueRank[n], rankCount = 0;
+
+    // Create unique ranks
+    uniqueRank[0] = ranked[0];
+    rankCount = 1;
+    for (int i = 1; i < n; i++) {
+        if (ranked[i] != ranked[i - 1]) { // Store only unique scores
+            uniqueRank[rankCount] = ranked[i];
+            rankCount++;
+        }
+    }
+
+    int pos = rankCount; // Start from the lowest rank
+
+    // Assign rank for each player's score
+    for (int i = 0; i < m; i++) {
+        while (pos > 0 && player[i] >= uniqueRank[pos - 1]) {
+            pos--; // Move up the leaderboard
+        }
+        result[i] = pos + 1; // Assign rank
+    }
+}
+
 int main() {
     int n, m;
-
+    
     // Read leaderboard size
     scanf("%d", &n);
-    int r[n]; // Define array with size n
-
+    int ranked[n];
+    
     // Read leaderboard scores
-    for (int i = 0; i < n; i++)
-        scanf("%d", &r[i]);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &ranked[i]);
+    }
 
-    // Read number of games played
+    // Read number of player scores
     scanf("%d", &m);
-    int p[m]; // Define array with size m
+    int player[m], result[m];
 
     // Read player scores
-    for (int i = 0; i < m; i++)
-        scanf("%d", &p[i]);
-
-    int rs[m]; // Array to store results
-
-    // Process leaderboard ranking
-    int rank = 1, j = 0;
-    for (int i = 1; i < n; i++) {
-        if (r[i] != r[i - 1]) 
-            rank++;
-    }
-
-    int pos = rank; // Start from lowest rank
-
-    // Find ranks for player scores
     for (int i = 0; i < m; i++) {
-        while (j < n && p[i] >= r[j]) 
-            j++;
-        rs[i] = j + 1;
+        scanf("%d", &player[i]);
     }
 
-    // Print the results
-    for (int i = 0; i < m; i++)
-        printf("%d\n", rs[i]);
+    // Compute ranks
+    trackPlayerRanks(ranked, n, player, m, result);
+
+    // Print results
+    for (int i = 0; i < m; i++) {
+        printf("%d\n", result[i]);
+    }
 
     return 0;
 }
-
