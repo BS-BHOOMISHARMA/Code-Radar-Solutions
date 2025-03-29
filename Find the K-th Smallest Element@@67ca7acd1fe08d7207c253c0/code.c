@@ -1,7 +1,7 @@
 #include <stdio.h>
 
+// Function to sort the array using the Selection Sort algorithm
 void selectionSort(int arr[], int n) {
-    // Sort the array using Selection Sort algorithm
     for (int i = 0; i < n - 1; i++) {
         int min_index = i;
         for (int j = i + 1; j < n; j++) {
@@ -16,9 +16,11 @@ void selectionSort(int arr[], int n) {
     }
 }
 
+// Function to find the Kth smallest element in the array
 int kthSmallest(int arr[], int n, int k) {
-    // Use selectionSort to sort the array
+    // Sort the array
     selectionSort(arr, n);
     // Return the Kth smallest element (1-based index)
     return arr[k - 1];
 }
+
