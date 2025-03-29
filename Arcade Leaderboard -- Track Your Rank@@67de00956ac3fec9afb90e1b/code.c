@@ -2,15 +2,19 @@
 
 int main() {
     int n, m;
+
     // Read leaderboard size
     scanf("%d", &n);
     int r[n]; // Define array with size n
+
     // Read leaderboard scores
     for (int i = 0; i < n; i++)
         scanf("%d", &r[i]);
+
     // Read number of games played
     scanf("%d", &m);
     int p[m]; // Define array with size m
+
     // Read player scores
     for (int i = 0; i < m; i++)
         scanf("%d", &p[i]);
@@ -39,3 +43,4 @@ int main() {
 
     return 0;
 }
+
