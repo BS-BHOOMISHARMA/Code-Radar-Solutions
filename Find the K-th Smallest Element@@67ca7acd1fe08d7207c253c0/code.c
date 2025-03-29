@@ -1,4 +1,4 @@
-#include <algorithm> // For sort function
+ // For sort function
 
 using namespace std;
 
