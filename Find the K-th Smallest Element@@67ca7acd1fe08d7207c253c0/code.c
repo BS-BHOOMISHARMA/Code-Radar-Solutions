@@ -22,8 +22,3 @@ int kthSmallest(int arr[], int n, int k) {
     // Return the Kth smallest element (1-based index)
     return arr[k - 1];
 }
-
-
-
-    return 0;
-}
